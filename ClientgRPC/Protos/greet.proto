@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyFirstgRPCService";
+
+package myFirstgRPCapiX;
+
+service MyService{
+	
+	rpc getInfo (RequestType) returns (ResponseType);
+
+}
+message RequestType{
+	int32 id =1;
+	string message = 2;
+}
+message ResponseType{
+	int32 id =1;
+	string message = 2;
+}
